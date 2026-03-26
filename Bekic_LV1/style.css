@@ -1,0 +1,153 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+main {
+    flex: 1;  /* zauzima sav preostali prostor između headera i footera --- za sticky footer*/
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f2f2;
+}
+
+/* HEADER */
+header {
+    background: #222;
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+
+/* GUMB */
+.menu-toggle {
+    background: #7bc6f8;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* NAVIGACIJA */
+nav {
+    display: none;
+}
+
+/* PRIKAZ NA HOVER */
+.menu-toggle:hover + nav,
+.menu-toggle:focus + nav,
+nav:hover,
+nav:focus-within {
+    display: block;
+}
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.nav-menu li {
+    padding: 10px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* CONTENT */
+.content {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+}
+
+/* LAYOUT (TABLICA + ASIDE) */
+.layout {
+    display: flex;
+    gap: 20px;
+}
+
+/* TABLICA */
+table {
+    width: 100%;
+    border-collapse: collapse; /* spaja(uklanja razmak između) granice ćelija u tablici*/
+}
+
+th {
+    background: #0066ff;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* ASIDE */
+aside {
+    max-width: 300px;
+}
+
+/* SLIKE */
+.responsive-img {
+    width: 100%;
+    border-radius: 10px;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.responsive-img:hover {
+    opacity: 1;
+    transform: scale(1.05); 
+}  
+
+/* ANALIZA */
+.analysis-flex {
+    display: flex;
+    justify-content: space-around; /*ravnomjerno raspoređuje .analysis-box elemente unutar reda, s jednakim prostorom oko svakog boxa.*/
+    margin: 20px;
+}
+
+.analysis-box {
+    background: #e3e3e3;
+    padding: 20px;
+    border-radius: 80px;
+    transition: transform 0.3s;
+}
+
+.analysis-box:hover {
+    transform: translateY(-5px);
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .layout {
+        flex-direction: column;
+    }
+
+    aside {
+        order: 2;
+    }
+
+    nav {
+        text-align: center;
+    }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafikon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="grafikon.css">
+</head>
+<body>
+<header>
+    <h1>Top 10 pjesama po žanru</h1>
+
+    <!-- NAVIGACIJA -->
+    <button class="menu-toggle" tabindex="0">☰ Izbornik</button>
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="slike.html">Slike</a></li>
+            <li><a href="grafikon.html">Grafikon</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="content">
+        <!-- TABLICA -->
+        <table>
+            <tr>
+                <th>Žanr</th>
+                <th>Pjesme</th>
+            </tr>
+            <tr>
+                <td>Rock</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Pop</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Indie</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Alternative</td>
+                <td>2</td>
+            </tr>
+        </table>
+
+        <!-- BAR CHART -->
+        <div class="bar-chart">
+            <div class="bar" style="--bar-height: 180px; --bar-color: var(--color-rock);">
+                <div class="fill"></div>
+                <label>Rock</label>
+            </div>
+            <div class="bar" style="--bar-height: 120px; --bar-color: var(--color-pop);">
+                <div class="fill"></div>
+                <label>Pop</label>
+            </div>
+            <div class="bar" style="--bar-height: 120px; --bar-color: var(--color-indie);">
+                <div class="fill"></div>
+                <label>Indie</label>
+            </div>
+            <div class="bar" style="--bar-height: 120px; --bar-color: var(--color-alt);">
+                <div class="fill"></div>
+                <label>Alternative</label>
+            </div>
+        </div>
+
+        <!-- PIE CHART -->
+        <div class="pie-chart">
+            <div class="slice slice-rock" title="Rock: 3 pjesme"></div>
+            <div class="slice slice-pop" title="Pop: 2 pjesme"></div>
+            <div class="slice slice-indie" title="Indie: 2 pjesme"></div>
+            <div class="slice slice-alt" title="Alternative: 2 pjesme"></div>
+        </div>
+    </div>
+</main>
+
+    <footer>
+        <p>&copy; 2026 Web Programiranje</p>
+    </footer>
+</body>
+</html>
