@@ -37,7 +37,7 @@ nav {
 }
 
 /* PRIKAZ NA HOVER */
-.menu-toggle:hover + nav,
+/*.menu-toggle:hover + nav,*/
 .menu-toggle:focus + nav,
 nav:hover,
 nav:focus-within {
