@@ -1,0 +1,16 @@
+{
+  "name": "bekic-lv1",
+  "version": "1.0.0",
+  "description": "LV2 - Node.js i Express",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "ejs": "^5.0.1",
+    "express": "^5.2.1"
+  }
+}

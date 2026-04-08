@@ -1,0 +1,121 @@
+/* VARIJABLE */
+:root {
+    --bar-width: 50px;
+    --bar-gap: 40px;
+    --chart-height: 200px;
+    --color-rock: #abdafa;
+    --color-pop: #65a1c9;
+    --color-indie: #3374a0;
+    --color-alt: #062b44;
+    --pie-size: 250px;
+}
+
+/* DEFAULT: BAR CHART prikazan, PIE CHART sakriven */
+.bar-chart { display: flex; justify-content: center; align-items: flex-end; gap: var(--bar-gap); height: var(--chart-height); margin: 20px 0; }
+.pie-chart { display: none; }
+
+/* BAR CHART */
+.bar {
+    width: var(--bar-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.bar .fill {
+    width: 100%;
+    height: 0;
+    background-color: var(--bar-color);
+    border-radius: 5px 5px 0 0;
+    animation: grow 1s ease-out forwards;
+}
+
+@keyframes grow {
+    from { height: 0; }
+    to { height: var(--bar-height); }
+}
+
+.bar:hover {
+    transform: scale(1.05);
+}
+
+.bar label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* PIE CHART */
+.pie-chart {
+    width: var(--pie-size);
+    height: var(--pie-size);
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--color-rock) 0 30%,
+        var(--color-pop) 30% 50%,
+        var(--color-indie) 50% 70%,
+        var(--color-alt) 70% 100%
+    );
+    margin: 20px auto;
+    position: relative;
+    animation: rotatePie 1.5s ease-out forwards;
+}
+
+@keyframes rotatePie {
+    from { transform: rotate(-360deg); }
+    to { transform: rotate(0deg); }
+}
+
+/* Tooltip preko pie charta */
+.pie-chart::after {
+    content: "Hover nad pie chartom za detalje";
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 110%;
+    left: 0;
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* RESPONSIVNOST */
+@media (max-width: 768px) {
+    /* Bar chart sakrij, pie chart prikaži */
+    .bar-chart { display: none; }
+    .pie-chart { display: block; width: 180px; height: 180px; }
+
+    /* Ako hoćeš, i bar chart može postati column prije skrivanja */
+    .bar-chart {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .bar {
+        width: 40px;
+        margin-bottom: 20px;
+    }
+}
+.pie-chart::after {
+    content: ""; /* default prazno */
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 110%;
+    padding: 5px 10px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    font-size: 0.9em;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+/* Kada hoveramo preko pie chart-a */
+.pie-chart:hover::after {
+    content: "Rock 30%, Pop 20%, Indie 20%, Alternative 30%";
+    opacity: 1;
+}
