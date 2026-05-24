@@ -1,0 +1,157 @@
+/* AUTH STRANICE */
+
+.auth-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: #f5f2f2;
+
+    padding: 30px;
+}
+
+/* CARD */
+
+.auth-box {
+
+    background: white;
+
+    width: 100%;
+
+    max-width: 450px;
+
+    padding: 40px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* NASLOV */
+
+.auth-box h1 {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    font-size: 42px;
+
+    color: #222;
+}
+
+/* LABEL */
+
+.auth-box label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+/* INPUT */
+
+.auth-box input {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+/* BUTTON */
+
+.auth-box button {
+
+    width: 100%;
+
+    padding: 14px;
+
+    background-color: #0066ff;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.auth-box button:hover {
+
+    background-color: #0050cc;
+}
+
+/* LINK */
+
+.auth-link {
+
+    text-align: center;
+
+    margin-top: 20px;
+}
+
+.auth-link a {
+
+    color: #0066ff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.auth-link a:hover {
+
+    text-decoration: underline;
+}
+
+/* PORUKA */
+
+.auth-message {
+
+    margin-top: 15px;
+
+    text-align: center;
+
+    color: red;
+
+    font-weight: bold;
+}
+
+/* USPJESNA PORUKA */
+
+.success-message {
+
+    background-color: #d4edda;
+
+    color: #155724;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    font-weight: bold;
+}
